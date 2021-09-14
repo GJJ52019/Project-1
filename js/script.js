@@ -1,5 +1,5 @@
 //cached items 
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 const $state = $('#state');
 const $billTitle = $('#bill-title');
 const $billNumber = $('#bill-number');
@@ -9,3 +9,40 @@ const $billText = $('bill-text');
 const $querySearched = $('query-searched')
 const $input = $('input[type="text"]');
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+function handleGetData(event) {
+    // prevents the page from reloading on default
+    event.preventDefault();
+
+    //     getting the user input
+    //userInput = $input.val();
+    // $querySearched.text = userInput
+
+    $.ajax({
+        url: 'https://api.legiscan.com/?key=064d811d52b70be6cd88415100845f4f&op=search&state=MD&query=tax'
+        //'https://www.omdbapi.com/?apikey=1ab46e65&t=' + userInput
+    }).then(
+        (data) => {
+            console.log(data);
+            render(data);
+        },
+        (error) => {
+            console.log("Oops something went wrong: ", error)
+        }
+    );
+}
+
+function render(data) {
+    $state.text('State: ' + data.searchresult[0].state);
+    $billTitle.text('Bills Title: ' + data.searchresult[0].title);
+    $billNumber.text('Bill Number: ' + data.searchresult[0].bill_number);
+    $lastActionDate.text('Date of Last Action: ' + data.searchresult[0].last_action_date);
+    $lastAction.text('Last Action Taken: ' + data.searchresult[0].last_action);
+    //$billText = $('bill-text');
+
+}
+
+
+//targets form in html and on submit runs handleGetData
+//** on submit allows the user to just press enter *********************************************/
+$('form').on('submit', handleGetData);
