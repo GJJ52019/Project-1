@@ -14,9 +14,7 @@ let $stateID = "";
 const select = document.getElementById('edit-state-id')
 select.addEventListener('change', function () {
     let index = select.options[select.selectedIndex].value;
-    console.log(index);
   $stateID = index;
-  console.log($stateID);
 })
 
 function handleGetData(event) {
@@ -27,8 +25,6 @@ function handleGetData(event) {
 
     //getting the user input
     userInput = $input.val();
-    console.log(userInput);
-    console.log($stateID);
     $querySearched.text(userInput);
 
 
@@ -39,11 +35,10 @@ function handleGetData(event) {
 
     }).then(
         (data) => {
-            console.log(data.searchresult[0].text_url);
             render(data);
         },
         (error) => {
-            console.log("Oops something went wrong: ", error)
+            alert("Oops something went wrong: ", error)
         }
     );
 
