@@ -5,23 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="./js/script.js"></script>
     <title>Laws and Regs</title>
 </head>
 
 <body>
-  
-<h1>Find Related Legal Information</h1>
-<form>
-    <input type="text" placeholder="serch here"/>
-    <input type="submit" value="Get Law Info" />
-  </form>
-<main>    
-</main>
+    <div class="all-content">
+        <header>
+            <h1>Find Related Legal Information</h1>
+            <form>
+                <input type="text" placeholder="search here" />
+                <input type="submit" value="Get Law Info" />
+            </form>
+        </header>
+        <main>
+            <h2 id="query-searched"></h2>
+            <p id="state"></p>
+            <p id="bill-title"></p>
+            <p id="bill-number"></p>
+            <p id="last-action-date"></p>
+            <p id="last-action"></p>
+            <p id="bill-text"></p>
+        </main>
 
-
+    </div>
 </body>
 
 </html>
