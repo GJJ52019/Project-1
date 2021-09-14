@@ -5,10 +5,10 @@ const $billTitle = $('#bill-title');
 const $billNumber = $('#bill-number');
 const $lastActionDate = $('#last-action-date');
 const $lastAction = $('#last-action');
-const $billText = $('bill-text');
-const $querySearched = $('query-searched')
+const $billText = $('#bill-text');
+const $querySearched = $('#query-searched')
 const $input = $('input[type="text"]');
-let $stateID = ""
+let $stateID = "";
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const select = document.getElementById('edit-state-id')
@@ -29,7 +29,7 @@ function handleGetData(event) {
     userInput = $input.val();
     console.log(userInput);
     console.log($stateID);
-    // $querySearched.text(userInput.text);
+    $querySearched.text(userInput);
 
 
 
@@ -68,7 +68,7 @@ function render(data) {
     $billNumber.text('Bill Number: ' + data.searchresult[0].bill_number);
     $lastActionDate.text('Date of Last Action: ' + data.searchresult[0].last_action_date);
     $lastAction.text('Last Action Taken: ' + data.searchresult[0].last_action);
-    $billText.text('url to Bill text: ' + data.searchresult[0].text_url);
+    $billText.text('URL to Bill Text: ' + data.searchresult[0].text_url);
 
 }
 
