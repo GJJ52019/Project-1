@@ -1,0 +1,19 @@
+
+/* For mobile first */
+/* want to keep this simple as the information is very important and should be accessible to all */
+header {
+    text-align: center;
+    margin: 2rem;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+}
+
+main {
+    border: 1px solid tan;
+    max-width: 300px;
+    margin: auto;
+}
+
