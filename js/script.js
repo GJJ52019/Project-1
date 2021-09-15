@@ -42,18 +42,6 @@ function handleGetData(event) {
         }
     );
 
-    // $.ajax({
-    //     url: 'https://api.legiscan.com/?key=064d811d52b70be6cd88415100845f4f&op=getBillText&id=2417056'
-
-    //     }).then(
-    //     (data2) => {
-    //         console.log(data2);
-    //         render2(data2);
-    //     },
-    //     (error) => {
-    //         console.log("Oops something went wrong: ", error)
-    //     }
-    // );
 }
 
 function render(data) {
@@ -66,11 +54,6 @@ function render(data) {
     $billText.html(`Bill Text URL: <a href="${data.searchresult[0].text_url}" target="_blank">${data.searchresult[0].text_url}</a>`);
 
 }
-
-// function render2(data2){
-//     $billText.text(data2.text.doc)
-// }
-
 
 //targets form in html and on submit runs handleGetData
 //** on submit allows the user to just press enter *********************************************/
