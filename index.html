@@ -72,19 +72,19 @@
                     <option value="DC">Washington D.C.</option>
                     <option value="US">US Congress</option>
                 </select>
-                <input type="text" placeholder="search here" />
+                <input id="input-area" type="text" placeholder="search here" />
                 <input type="submit" value="Get Info" />
 
             </form>
         </header>
         <h2 id="query-searched"></h2>
         <main>
-            <p id="state"></p>
-            <p id="bill-title"></p>
-            <p id="bill-number"></p>
-            <p id="last-action-date"></p>
-            <p id="last-action"></p>
-            <p id="bill-text"></p>
+            <!-- uses java script to fill in the table with upto 10 queries -->
+            <table id="bills" class="table">
+                <tbody id ="tbody">
+
+                </tbody>
+            </table>
         </main>
 
     </div>
