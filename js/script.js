@@ -63,7 +63,7 @@ function render(data) {
     $billNumber.text('Bill Number: ' + data.searchresult[0].bill_number);
     $lastActionDate.text('Date of Last Action: ' + data.searchresult[0].last_action_date);
     $lastAction.text('Last Action Taken: ' + data.searchresult[0].last_action);
-    $billText.text('URL to Bill Text: ' + data.searchresult[0].text_url);
+    $billText.html(`Bill Text URL: <a href="${data.searchresult[0].text_url}" target="_blank">${data.searchresult[0].text_url}</a>`);
 
 }
 
