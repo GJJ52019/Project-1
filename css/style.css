@@ -11,9 +11,17 @@ h2 {
     margin: auto;
 }
 
-main {
+table{
+    text-align: center;
+    margin:auto;
+}
+tr {
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid tan;
     max-width: 300px;
+    /* text-align: center; */
     margin: auto;
+    margin-bottom: 3px; 
 }
-
+ 
