@@ -1,7 +1,9 @@
 # __Legiscan API project__
 The Idea is to make a website that uses legiscan api to search for regulations related to user inquiry. 
 ---------------------------------------------------------------------------------------------
+
     One of the largest problems facing our country is how seemingly off limits legislation feels to the everyday person. The goal of this app is to be able to quickly find related legislation that is current enough to bring the user up to date on what is happening in their state or even the country by pulling recent legislations related to their search. While this app might not help the user interpret what is actually being said in the bills (legalese is not easy to read and understand) it will certainly help open up exposure and maybe help bring down the out of sight out of mind mentality that appears when elections are not happening. 
+    
 ----------------------------------------------------------------------------------------------
 
 
@@ -49,5 +51,6 @@ https://serene-saha-6ff399.netlify.app
 3. Intend to show sponsers of the bills with their office information so constituents know who to contact regarding the legislation
 
 ### __FAR OFF Ideas__
+
 Let the users store bills they want to track and be notified when actions are being taken on them 
 ----------------------------------------------------------------------------------------------
